@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: the1-web
+  namespace: the1-web-dev
+  annotations:
+    kubernetes.io/ingress.class: nginx-web
+    # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/server-snippet: |
+      add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+spec:
+  tls:
+  - hosts:
+    - dev-web.the1central.com
+    secretName: the1central
+  rules:
+  - host: dev-web.the1central.com # Edit Example: sit.the1.co.th
+    http:
+      paths:
+      - backend:
+          serviceName: the1-web-svc # Edit Service name
+          servicePort: 80 # Edit Service port
+        path: /

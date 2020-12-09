@@ -16,7 +16,7 @@ spec:
         app: the1-web
     spec:
       containers:
-        - image: 826128703544.dkr.ecr.ap-southeast-1.amazonaws.com/the1web:latest
+        - image: 826128703544.dkr.ecr.ap-southeast-1.amazonaws.com/the1-web-dev:latest
           imagePullPolicy: Always
           name: the1-web
           ports:

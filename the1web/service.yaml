@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name:  the1-web-svc
-  namespace: the1-web-dev
+  namespace: the1-web-#ENV#
   labels:
     app: the1-web
 spec:

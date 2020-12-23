@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: the1-web-deployment
-  namespace: the1-web-dev
+  namespace: the1-web-#ENV#
   labels:
     app: the1-web
 spec:
@@ -16,7 +16,7 @@ spec:
         app: the1-web
     spec:
       containers:
-        - image: 826128703544.dkr.ecr.ap-southeast-1.amazonaws.com/the1-web-dev:latest
+        - image: #IMAGE#:#TAG#
           imagePullPolicy: Always
           name: the1-web
           ports:

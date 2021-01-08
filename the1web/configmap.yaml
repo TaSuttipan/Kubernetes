@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: the1-web
+  namespace: the1-web-#ENV#
+data:
+  ENABLE_DYNAMIC_REWARD: "1"
+  bucket_url: https://#ENV#.the1.co.th
+  gaID: UA-167449449-1
+  gtmID: GTM-KWKZXD8
+  hostname: https://#ENV#.the1.co.th
+  libThe1Url: https://uatlibrary.the1.co.th/content/the1/api/th
+  primo_api_url: https://#ENV#-the1web-api.the1.co.th/api
+  spotOnUrl: https://#ENV#-the1web-api.the1.co.th
+  target_mail: The1partnership@central.co.th
+  version: 1.2.0

@@ -28,4 +28,55 @@ spec:
             limits:
               cpu: 1000m
               memory: 1024Mi
+          env:
+          - name: bucket_url
+            valueFrom:
+              configMapKeyRef:
+                key: bucket_url
+                name: the1-web
+          - name: target_mail
+            valueFrom:
+              configMapKeyRef:
+                key: target_mail
+                name: the1-web
+          - name: hostname
+            valueFrom:
+              configMapKeyRef:
+                key: hostname
+                name: the1-web
+          - name: spotOnUrl
+            valueFrom:
+              configMapKeyRef:
+                key: spotOnUrl
+                name: the1-web
+          - name: libThe1Url
+            valueFrom:
+              configMapKeyRef:
+                key: libThe1Url
+                name: the1-web
+          - name: primo_api_url
+            valueFrom:
+              configMapKeyRef:
+                key: primo_api_url
+                name: the1-web
+          - name: version
+            valueFrom:
+              configMapKeyRef:
+                key: version
+                name: the1-web
+          - name: gtmID
+            valueFrom:
+              configMapKeyRef:
+                key: gtmID
+                name: the1-web
+          - name: gaID
+            valueFrom:
+              configMapKeyRef:
+                key: gaID
+                name: the1-web
+          - name: ENABLE_DYNAMIC_REWARD
+            valueFrom:
+              configMapKeyRef:
+                key: ENABLE_DYNAMIC_REWARD
+                name: the1-web
         
